@@ -1,0 +1,345 @@
+:root {
+  --main-bg-color: #ffe2b0;
+  --text-color: #7a4225;
+  --accent-color: #f15b40;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--main-bg-color);
+}
+
+.header {
+  padding: 0;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 235px;
+  height: 100px;
+}
+
+.nav-list {
+  display: flex;
+  margin: 20px 0;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 100px;
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+.hero {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  display: block;
+}
+
+.special-order {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--main-bg-color);
+  width: 420px;
+  height: 190px;
+  box-sizing: border-box;
+}
+
+.special-order h2 {
+  font-family: "Philosopher", sans-serif;
+  font-size: 28px;
+  margin: 0;
+  padding: 17px 28px;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.special-order p {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 15px 28px;
+}
+
+.features {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.features-icons {
+  display: flex;
+  justify-content: center;
+  gap: 76px;
+  margin-bottom: 50px;
+}
+
+.feature-icon {
+  width: 290px;
+  height: 290px;
+}
+
+.main-title {
+  font-family: "Philosopher", sans-serif;
+  font-size: 96px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.main-title span {
+  color: var(--accent-color);
+}
+
+.features-text {
+  width: 1000px;
+  margin: 0 auto 40px;
+  line-height: 1.5;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+.order-button {
+  display: block;
+  margin: 0 auto;
+  background: none;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  padding: 8px 20px;
+  font-size: 36px;
+  font-family: "Philosopher", sans-serif;
+  cursor: pointer;
+}
+
+.map {
+  margin: 20px auto;
+  width: 1024px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 400px;
+  display: block;
+  border: 1px solid var(--text-color);
+}
+
+.footer {
+  border-top: 1px solid #999999;
+  padding: 20px 0;
+  margin-top: auto;
+  text-align: center;
+}
+
+.footer .nav {
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer .nav-list {
+  margin: 0;
+}
+
+.developer {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  color: #1a1a1a;
+  letter-spacing: 2px;
+  font-weight: 600;
+  padding: 15px 0;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1440px) {
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .special-order {
+    width: 380px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .features {
+    padding: 20px;
+  }
+
+  .features-text {
+    width: 90%;
+  }
+
+  .map {
+    width: 90%;
+  }
+
+  .features-icons {
+    gap: 40px;
+  }
+
+  .feature-icon {
+    width: 200px;
+    height: 200px;
+  }
+
+  .main-title {
+    font-size: 72px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .nav-item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .special-order {
+    position: static;
+    width: 90%;
+    margin: 20px auto;
+    transform: none;
+    height: auto;
+  }
+
+  .features-icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .feature-icon {
+    width: 250px;
+    height: 250px;
+  }
+
+  .main-title {
+    font-size: 48px;
+    padding: 0 20px;
+  }
+
+  .order-button {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 180px;
+    height: 80px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+
+  .special-order h2 {
+    font-size: 24px;
+    padding: 15px 20px;
+  }
+
+  .special-order p {
+    font-size: 11px;
+    padding: 12px 20px;
+  }
+
+  .feature-icon {
+    width: 200px;
+    height: 200px;
+  }
+
+  .main-title {
+    font-size: 36px;
+  }
+
+  .features-text {
+    font-size: 16px;
+  }
+
+  .order-button {
+    font-size: 20px;
+    padding: 6px 16px;
+  }
+
+  .map iframe {
+    height: 300px;
+  }
+
+  .developer {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+
+  .special-order {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo {
+    width: 150px;
+    height: 70px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .feature-icon {
+    width: 160px;
+    height: 160px;
+  }
+
+  .main-title {
+    font-size: 32px;
+  }
+
+  .features-text {
+    font-size: 14px;
+  }
+
+  .order-button {
+    font-size: 18px;
+  }
+
+  .map iframe {
+    height: 250px;
+  }
+}
